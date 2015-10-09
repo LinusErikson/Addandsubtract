@@ -12,9 +12,23 @@ namespace WindowsFormsApplication3
 {
     public partial class Form1 : Form
     {
+        int sum;
+
         public Form1()
         {
             InitializeComponent();
+            sum = 0;
+            labelSum.Text = sum.ToString();
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            labelSum.Text = sum++.ToString();
+        }
+
+        private void buttonSubtract_Click(object sender, EventArgs e)
+        {
+            labelSum.Text = sum--.ToString();
         }
     }
 }
